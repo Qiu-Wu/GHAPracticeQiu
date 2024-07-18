@@ -12,7 +12,7 @@ on:
     - cron: '15 6 * * SAT'
 
 jobs:
-  job_1:
+  Build:
     runs-on: ubuntu-latest
 
     steps:
