@@ -1,0 +1,23 @@
+name: GitHub Actions Demo
+on:
+  push: 
+    branches: 
+        - 'main'
+    paths-ignore: 
+      - '.github/*'
+  pull_request:
+    branches:
+      - 'main'
+  schedule:
+    - cron: '15 6 * * SAT'
+
+jobs:
+  job_1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "🎉 The job was triggered by a ${{ github['event_name'] }} event."
+      - run: echo "The job was in ${{ github['branch'] }} branch."
+      - run: ls .
+      
+        
